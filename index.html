@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="StrataNode Infrastructure is an Irish low-altitude infrastructure originator focused on corridor intelligence, compliance, commercialisation and infrastructure delivery partnerships." name="description"/>
-<title>StrataNode Infrastructure Ltd | Connecting Ireland’s Low-Altitude Economy</title>
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StrataNode Infrastructure is an independent low-altitude infrastructure originator focused on physical, regulatory, digital, and commercial network architecture.">
+  <title>StrataNode Infrastructure Ltd | Connecting Ireland’s Low-Altitude Economy</title>
+  <style>
     :root{
       --navy:#071f33;
       --navy-2:#0b2e43;
@@ -62,10 +61,11 @@
     h3{font-size:1.28rem;margin:0 0 12px}
     .lead{font-size:1.12rem;color:var(--muted)}
     .section-dark .lead{color:#c1d0da}
-    .grid-2,.grid-3,.grid-4{display:grid;gap:24px}
+    .grid-2,.grid-3,.grid-4,.grid-5{display:grid;gap:24px}
     .grid-2{grid-template-columns:repeat(2,1fr)}
     .grid-3{grid-template-columns:repeat(3,1fr)}
     .grid-4{grid-template-columns:repeat(4,1fr)}
+    .grid-5{grid-template-columns:repeat(5,1fr)}
     .card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px;box-shadow:0 8px 24px rgba(7,31,51,.05)}
     .section-dark .card{background:#0d3045;border-color:#214a61}
     .number{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--mint);color:var(--teal-dark);font-weight:900;margin-bottom:16px}
@@ -90,7 +90,7 @@
     .small{font-size:.9rem;color:var(--muted)}
     @media(max-width:900px){
       .nav-links{display:none}
-      .hero-grid,.grid-2,.grid-3,.grid-4,.roadmap-grid,.footer-grid{grid-template-columns:1fr}
+      .hero-grid,.grid-2,.grid-3,.grid-4,.grid-5,.roadmap-grid,.footer-grid{grid-template-columns:1fr}
       .hero{padding-top:65px}
       h1{font-size:3.7rem}
     }
@@ -98,443 +98,431 @@
 </head>
 <body>
 <header>
-<div class="container nav">
-<a class="brand" href="#top">
-<div class="brand-mark"><span>S</span></div>
-<div class="brand-name">StrataNode Infrastructure
+  <div class="container nav">
+    <a class="brand" href="#top">
+      <div class="brand-mark"><span>S</span></div>
+      <div class="brand-name">StrataNode Infrastructure
         <small>Low-Altitude Infrastructure Origination</small>
-</div>
-</a>
-<nav aria-label="Main navigation" class="nav-links">
-<a href="#who">Context</a>
-<a href="#why-now">Why Now</a>
-<a href="#founder">Founder Edge</a>
-<a href="#differentiation">Difference</a>
-<a href="#technology">Technology</a>
-<a href="#defensibility">Defensibility</a>
-<a href="#roadmap">Roadmap</a>
-<a class="nav-button" href="#discussion">Join the Discussion</a>
-</nav>
-</div>
+      </div>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#who">Who We Are</a>
+      <a href="#why-now">Why Now</a>
+      <a href="#four-cs">Framework</a>
+      <a href="#differentiation">Difference</a>
+      <a href="#technology">Technology</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#roadmap">Roadmap</a>
+      <a class="nav-button" href="#discussion">Join the Discussion</a>
+    </nav>
+  </div>
 </header>
+
 <main id="top">
 <section class="hero">
-<div class="container hero-grid">
-<div>
-<span class="eyebrow">Strategic Briefing Document</span>
-<h1>Connecting Ireland’s <span class="accent">Low-Altitude Economy</span></h1>
-<p class="hero-copy">StrataNode originates the physical, regulatory, digital and commercial architecture required for secure, interoperable, multi-operator low-altitude networks.</p>
-<div class="hero-actions">
-<a class="button button-primary" href="#four-cs">Explore the 4 Cs</a>
-<a class="button button-secondary" href="#discussion">Review and Challenge</a>
-</div>
-</div>
-<div class="layer-card">
-<span class="eyebrow">The Infrastructure Layer</span>
-<div class="node-row">
-<div class="node">Node A</div><div class="line"></div><div class="node">Node B</div>
-</div>
-<p>Corridor → Compliance → Commercialisation → Construction</p>
-</div>
-</div>
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Strategic Briefing Document</span>
+      <h1>Connecting Ireland’s <span class="accent">Low-Altitude Economy</span></h1>
+      <p class="hero-copy">StrataNode Infrastructure originates the physical, regulatory, digital, and commercial architecture required for secure, interoperable, multi-operator low-altitude networks.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#four-cs">Explore the Framework</a>
+        <a class="button button-secondary" href="#discussion">Review and Challenge</a>
+      </div>
+    </div>
+    <div class="layer-card">
+      <span class="eyebrow">The Balanced Architecture</span>
+      <div class="node-row">
+        <div class="node">Physical</div><div class="line"></div><div class="node">Digital</div>
+      </div>
+      <p style="text-align: center; font-weight: 600; font-size: 0.95rem; color: var(--teal);">Physical Nodes → Compliance → Connectivity → Commercial Coordination → Future DePIN</p>
+    </div>
+  </div>
 </section>
 
 <section id="who">
-<div class="container">
-<div class="section-heading">
-<span class="eyebrow">1. Strategic Context</span>
-<h2>An independent infrastructure originator</h2>
-</div>
-<div class="grid-3">
-<div class="card">
-<h3>What StrataNode does</h3>
-<p>We design, de-risk and structure the integrated physical and digital ground-layer assets required to enable scalable, commercial UAS operations.</p>
-</div>
-<div class="card">
-<h3>What StrataNode does not do</h3>
-<p>We do not manufacture aircraft, operate logistics fleets or develop standalone UTM software packages.</p>
-</div>
-<div class="card">
-<h3>Core philosophy</h3>
-<p>Physical infrastructure first, regulatory compliance second and commercial viability third. Secure connectivity, trusted data and future programmable settlement remain enabling utility layers beneath the corridor network.</p>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">1. Who StrataNode Is</span>
+      <h2>An independent infrastructure originator</h2>
+      <p class="lead">StrataNode designs, de-risks, and structures the integrated physical and digital ground-layer assets required to enable scalable, commercial UAS operations.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>What StrataNode does</h3>
+        <p>We design, de-risk, and structure the integrated physical and digital ground-layer assets required to enable scalable, commercial UAS operations. Projects prioritize physical infrastructure first, regulatory compliance second, and commercial viability third.</p>
+      </div>
+      <div class="card">
+        <h3>What StrataNode does not do</h3>
+        <p>We do not manufacture aircraft, operate logistics fleets, or develop standalone UTM software packages. Our focus remains strictly bounded to ground-layer network origination.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-<section class="section-alt" id="why-now">
-<div class="container">
-<div class="section-heading">
-<span class="eyebrow">2. Why Now</span>
-<h2>The policy is advancing. The ground layer remains immature.</h2>
-</div>
-<div class="grid-4">
-<div class="card">
-<h3>Policy transition</h3>
-<p>Following the launch of Ireland’s National Policy Framework for Unmanned Aircraft Systems in August 2025, the country has moved from consultation towards active implementation.</p>
-</div>
-<div class="card">
-<h3>Regulatory credibility</h3>
-<p>In 2021, the IAA issued Skyports a BVLOS-capable Light UAS Operator Certificate described by the IAA as the first such certificate issued by an EU regulator.</p>
-</div>
-<div class="card">
-<h3>International precedent</h3>
-<p>European corridor initiatives have demonstrated automated ground stations integrated with secure machine-to-machine peer-to-peer communications, while identifying tokenisation, machine payments, trusted telemetry and insurance-data infrastructure as areas for further development.</p>
-</div>
-<div class="card">
-<h3>Infrastructure gap</h3>
-<p>Aircraft, software and airspace systems are developing faster than the physical, commercial and site infrastructure required for repeatable operations.</p>
-</div>
-</div>
-</div>
+<section id="why-now" class="section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">2. Why Now</span>
+      <h2>The policy is advancing. The ground layer remains immature.</h2>
+    </div>
+    <div class="grid-4">
+      <div class="card">
+        <h3>Policy Transitions</h3>
+        <p>Following the launch of the <em>National Policy Framework for Unmanned Aircraft Systems</em> in August 2025, Ireland has shifted from regulatory consultation into active policy implementation.</p>
+      </div>
+      <div class="card">
+        <h3>Regulatory Credibility</h3>
+        <p>Ireland maintains a highly credible regulatory environment. In 2021, the IAA issued Skyports a BVLOS-capable Light UAS Operator Certificate (LUC) described as the first such certificate issued by an EU regulator.</p>
+      </div>
+      <div class="card">
+        <h3>International Precedent</h3>
+        <p>European drone-corridor initiatives have demonstrated the integration of automated ground stations with secure machine-to-machine peer-to-peer communications. These projects identified station tokenisation, machine payments, trusted telemetry and insurance data as development areas without depending on specific technology providers.</p>
+      </div>
+      <div class="card">
+        <h3>Infrastructure Gap</h3>
+        <p>While operators, regulators, and local authorities build software capabilities, the physical and commercial ground infrastructure layer remains immature, creating a time-sensitive window to secure strategic corridor assets.</p>
+      </div>
+    </div>
+  </div>
 </section>
-
 
 <section id="policy">
-<div class="container">
-<div class="section-heading">
-<span class="eyebrow">3. Policy Alignment</span>
-<h2>Aligned with stated public-policy objectives</h2>
-<p class="lead">StrataNode does not claim to represent the State. It structures private-sector projects so they can support the practical implementation of national and local UAS objectives.</p>
-</div>
-<div class="policy-band">
-<div class="grid-3">
-<div>
-<h3>Airspace and planning</h3>
-<p>Supports industry-led development, cross-government collaboration, geographical-zone planning and future U-space readiness.</p>
-</div>
-<div>
-<h3>Compliance and safety</h3>
-<p>Structures proposed projects for assessment within the appropriate IAA and EASA framework, including Specific Category, operational-authorisation and SORA requirements where applicable.</p>
-</div>
-<div>
-<h3>Enterprise and innovation</h3>
-<p>Aligns with Dublin City Council’s 2024–2029 Drone and Urban Air Mobility Strategy to support the wider ecosystem and innovative third-party services.</p>
-</div>
-</div>
-</div>
-<p class="small">BVLOS operations remain subject to advance authorisation, including where geographical zones are intended to support drone activity.</p>
-</div>
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">3. Policy Alignment</span>
+      <h2>Aligned with stated public-policy objectives</h2>
+      <p class="lead">StrataNode positions private-sector infrastructure projects so they directly support and advance the stated milestones of local and national public policies.</p>
+    </div>
+    <div class="policy-band">
+      <div class="grid-3">
+        <div>
+          <h3>Airspace and Planning</h3>
+          <p>Supports the practical implementation of the <em>National Policy Framework for UAS</em> regarding industry-led development, cross-government collaboration, and geographical-zone planning.</p>
+        </div>
+        <div>
+          <h3>Compliance and Safety</h3>
+          <p>Structures proposed projects so that operations can be assessed within the appropriate IAA and EASA regulatory framework, including Specific Category, operational-authorisation and SORA requirements where applicable. BVLOS operations remain subject to advance authorisation.</p>
+        </div>
+        <div>
+          <h3>Enterprise and Innovation</h3>
+          <p>Aligns directly with Dublin City Council’s <em>Drone and Urban Air Mobility Strategy (2024–2029)</em> to support the wider drone ecosystem and facilitate innovative third-party utility services.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-<section class="section-alt" id="founder">
-<div class="container">
-<div class="section-heading">
-<span class="eyebrow">4. Founder Edge</span>
-<h2>Translating Aviation, Construction and Web3 into Infrastructure Reality</h2>
-</div>
-<div class="grid-4">
-<div class="card">
-<h3>Construction-Sector Experience</h3>
-<p>Direct experience within major civil-engineering and infrastructure environments, providing practical insight into complex site delivery, structural planning, supply chains, safety, access and construction constraints.</p>
-</div>
-<div class="card">
-<h3>Drone and Mobility Exposure</h3>
-<p>Practical exposure to drone-technology integration, regional drone-testing environments and Ireland’s developing aviation and future-mobility ecosystem.</p>
-</div>
-<div class="card">
-<h3>Web3 and Blockchain Experience</h3>
-<p>Darragh has practical experience in blockchain, digital assets and Web3 infrastructure. During the COVID period, he participated in a Web3 project that successfully completed a fundraising round, giving him direct exposure to token-based project development, digital communities, wallet infrastructure and blockchain-enabled commercial models.</p>
-</div>
-<div class="card">
-<h3>Aviation-to-Construction Translation</h3>
-<p>A distinct capability to convert aviation and digital-infrastructure concepts into realistic site, access, construction, maintenance and commercial requirements.</p>
-</div>
-</div>
-<p class="lead" style="margin-top:32px;">This combination gives StrataNode a founder perspective spanning physical infrastructure, drone technology, commercial project development and emerging decentralised network models.</p>
-</div>
+<section id="founder" class="section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">4. Founder Edge</span>
+      <h2>Translating Aviation, Construction and Web3 into Infrastructure Reality</h2>
+    </div>
+    <div class="grid-4">
+      <div class="card">
+        <h3>Construction-Sector Experience</h3>
+        <p>Direct experience within major civil-engineering and infrastructure environments, providing practical insight into complex site delivery, structural planning, supply chains, safety, access and construction constraints.</p>
+      </div>
+      <div class="card">
+        <h3>Drone and Mobility Exposure</h3>
+        <p>Practical exposure to drone-technology integration, regional drone-testing environments and Ireland’s developing aviation and future-mobility ecosystem.</p>
+      </div>
+      <div class="card">
+        <h3>Web3 and Blockchain Experience</h3>
+        <p>Darragh has practical experience in blockchain, digital assets and Web3 infrastructure. During the COVID period, he participated in a Web3 project that successfully completed a fundraising round, giving him direct exposure to token-based project development, digital communities, wallet infrastructure and blockchain-enabled commercial models.</p>
+      </div>
+      <div class="card">
+        <h3>Aviation-to-Construction Translation</h3>
+        <p>A distinct capability to convert aviation and digital-infrastructure concepts into realistic site, access, construction, maintenance and commercial requirements.</p>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:32px;">This combination gives StrataNode a founder perspective spanning physical infrastructure, drone technology, commercial project development and emerging decentralised network models.</p>
+  </div>
 </section>
 
 <section id="four-cs">
-<div class="container">
-<div class="section-heading">
-<span class="eyebrow">5. The 4 Cs + Connectivity</span>
-<h2>A repeatable project-development and network-coordination method</h2>
-<p class="lead">StrataNode integrates corridor origination, compliance, commercialisation, construction and the secure digital layer that connects machines, operators, data and future settlement.</p>
-</div>
-<div class="grid-3">
-<div class="card"><span class="number">1</span><h3>Corridors</h3><p>Identify and assess high-value routes, infrastructure nodes and use cases.</p></div>
-<div class="card"><span class="number">2</span><h3>Compliance</h3><p>Coordinate aviation, planning, privacy, insurance and safety requirements through qualified specialists.</p></div>
-<div class="card"><span class="number">3</span><h3>Commercialisation</h3><p>Validate demand, identify the paying customer and structure the commercial and investment model.</p></div>
-<div class="card"><span class="number">4</span><h3>Construction</h3><p>Work with qualified civil-engineering, technology and facilities providers to deliver the physical layer.</p></div>
-<div class="card"><span class="number">5</span><h3>Connectivity</h3><p>Securely connect machines, systems, operators, data and future settlement across the corridor network.</p></div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">5. Core Framework</span>
+      <h2>The 4 Cs + Connectivity Framework</h2>
+      <p class="lead">StrataNode differentiates itself by integrating the entire enabling layer rather than focusing on a single, isolated component of the low-altitude value chain.</p>
+    </div>
+    <div class="grid-5">
+      <div class="card"><span class="number">1</span><h3>Corridors</h3><p>Formally identifying, mapping, and de-risking high-value, point-to-point industrial pathways.</p></div>
+      <div class="card"><span class="number">2</span><h3>Compliance</h3><p>Translating complex aviation rules into clear, machine-readable operational boundaries to streamline authorization pathways.</p></div>
+      <div class="card"><span class="number">3</span><h3>Construction</h3><p>Deploying standardized, modular civil engineering ground designs optimized for rapid local planning integration and asset security.</p></div>
+      <div class="card"><span class="number">4</span><h3>Commercialisation</h3><p>Aggregating reliable B2B industrial volumes to structure project-specific Special Purpose Vehicles (SPVs).</p></div>
+      <div class="card"><span class="number">5</span><h3>Connectivity</h3><p>The Digital Overlay Stack. Securely connects machines, systems, operators, data, and payments. Provides verifiable identity, end-to-end telemetry encryption, and automated tokenized settlement options.</p></div>
+    </div>
+  </div>
 </section>
 
-<section class="section-dark" id="differentiation">
-<div class="container">
-<div class="section-heading">
-<span class="eyebrow">6. What Differentiates StrataNode</span>
-<h2>The five-layer stack</h2>
-<p class="lead"><strong>StrataNode originates the physical, regulatory, digital and commercial architecture required for secure, interoperable, multi-operator low-altitude networks.</strong></p>
-</div>
-<div class="grid-3">
-<div class="card"><span class="number">1</span><h3>Physical Infrastructure</h3><p>Landing and receiving nodes, charging and energy systems, secure storage, communications hardware, sensors, safety, access and maintenance points.</p></div>
-<div class="card"><span class="number">2</span><h3>Aviation and Compliance</h3><p>IAA and EASA pathways, SORA, operational authorisation, planning, insurance, privacy, security and public-acceptance requirements.</p></div>
-<div class="card"><span class="number">3</span><h3>Digital Infrastructure</h3><p>Machine and node identity, encrypted communications, remote monitoring, edge and cloud computing, telemetry, booking, operator integration and digital twins.</p></div>
-<div class="card"><span class="number">4</span><h3>Commercial Infrastructure</h3><p>Customer agreements, site and land-access rights, operator agreements, project financing, fees, data rights and maintenance contracts.</p></div>
-<div class="card"><span class="number">5</span><h3>DePIN and Future Settlement</h3><p>Node-host incentives, verifiable telemetry, programmable access fees, machine-to-machine payments, transparent revenue allocation and cryptographic records where legally justified.</p></div>
-<div class="card"><h3>Why this matters</h3><p>StrataNode is not tied to one aircraft, operator, station or software provider. It defines the architecture, interoperability standards and project rights that allow the network to evolve.</p></div>
-</div>
-</div>
+<section id="differentiation" class="section-dark">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">6. What Differentiates StrataNode</span>
+      <h2>An architecture originator, not a product vendor</h2>
+      <p class="lead">StrataNode originates the physical, regulatory, digital and commercial architecture required for secure, interoperable, multi-operator low-altitude networks.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card"><h3>Technology-Agnostic Architecture</h3><p>The company does not depend on one aircraft manufacturer, operator, or software platform. Its role is to define the required architecture and coordinate the physical and digital layers.</p></div>
+      <div class="card"><h3>Physical + Digital Integration</h3><p>Seamlessly bridging physical land footprint constraints with zero-trust cryptographic identity, redundant moving networks, and encrypted node orchestration.</p></div>
+      <div class="card"><h3>Defensible Project Rights</h3><p>Long-term control is derived from site rights, development options, data access rights, and permanent SPV equity coordination around the corridor network, rather than claiming airspace ownership.</p></div>
+      <div class="card"><h3>Future-Ready Connectivity</h3><p>Built with native readiness for end-to-end encrypted node telemetry, machine-readable access rules, and secure edge computing environments.</p></div>
+      <div class="card"><h3>DePIN Without Speculation</h3><p>Enables decentralized physical infrastructure participation and programmable settlement as an optional utility layer without depending on speculative digital token mechanics.</p></div>
+      <div class="card"><h3>Recurring Network Economics</h3><p>Designed around predictable long-term asset value drivers: multi-operator booking access fees, network infrastructure management fees, and non-personal operational data rights.</p></div>
+    </div>
+  </div>
 </section>
 
-
-<section class="section-alt" id="technology">
-<div class="container">
-<div class="section-heading">
-<span class="eyebrow">7. Enabling Technology Landscape</span>
-<h2>Available today, emerging now and developing next</h2>
-<p class="lead">StrataNode remains technology-agnostic while defining the standards required for secure, interoperable and commercially viable corridor infrastructure.</p>
-</div>
-<div class="grid-3">
-<div class="card">
-<span class="tag">Available Today</span>
-<h3>Operational infrastructure</h3>
-<ul>
-<li>Automated landing and charging stations</li>
-<li>Drone-in-a-box systems</li>
-<li>Encrypted machine communications</li>
-<li>Remote node monitoring</li>
-<li>Weather, telemetry and asset-health sensors</li>
-<li>Digital access control, booking and API integration</li>
-</ul>
-</div>
-<div class="card">
-<span class="tag">Emerging Now</span>
-<h3>Intelligent network systems</h3>
-<ul>
-<li>Cryptographic machine and node identity</li>
-<li>Zero-trust communications</li>
-<li>Digital twins and predictive maintenance</li>
-<li>Dynamic infrastructure-capacity allocation</li>
-<li>Interoperable multi-operator node access</li>
-<li>Trusted telemetry and tamper-evident audit records</li>
-</ul>
-</div>
-<div class="card">
-<span class="tag">Future Utility Layer</span>
-<h3>DePIN and Web3 applications</h3>
-<ul>
-<li>Approved landowners hosting infrastructure nodes</li>
-<li>Machine-to-machine charging and access payments</li>
-<li>Node-host incentives and transparent revenue allocation</li>
-<li>Verifiable data markets for non-personal operational information</li>
-<li>Cryptographic audit records</li>
-<li>Tokenised incentives where compliant and commercially justified</li>
-</ul>
-</div>
-</div>
-<p class="small">Fiat payments, conventional invoicing and established contractual structures remain the default for early projects. Blockchain, tokenised or programmable-settlement components would only be introduced where they provide a measurable security, interoperability, transparency or commercial benefit and after appropriate legal, tax, accounting, procurement, MiCA and data-protection review.</p>
-</div>
+<section id="technology" class="section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">7. Enabling Technology Landscape</span>
+      <h2>Available today, emerging now and developing next</h2>
+      <p class="lead">StrataNode defines how corridors can adopt advanced operational technology incrementally while mitigating systemic network risks.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <span class="tag">Available Today</span>
+        <h3>Operational Infrastructure</h3>
+        <ul>
+          <li>Automated landing and charging stations</li>
+          <li>Drone-in-a-box systems</li>
+          <li>Secure machine-to-machine communications</li>
+          <li>Remote node monitoring and orchestration</li>
+          <li>Weather, telemetry, and asset-health sensors</li>
+          <li>API integration between operators and customers</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">Emerging Now</span>
+        <h3>Intelligent Network Systems</h3>
+        <ul>
+          <li>Cryptographic machine and node identity</li>
+          <li>Zero-trust communications frameworks</li>
+          <li>Digital twins of routes and ground landing nodes</li>
+          <li>AI-assisted maintenance and predictive asset checks</li>
+          <li>Dynamic infrastructure-capacity allocation</li>
+          <li>Trusted telemetry and tamper-evident logs</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">Future Utility Layer</span>
+        <h3>DePIN and Web3 Applications</h3>
+        <ul>
+          <li>Approved node hosting and land participation</li>
+          <li>Automated machine-to-machine access payments</li>
+          <li>Transparent network revenue allocation splits</li>
+          <li>Verifiable markets for non-personal data</li>
+          <li>Cryptographic immutable operational records</li>
+          <li>Tokenised incentives where compliant and justified</li>
+        </ul>
+      </div>
+    </div>
+    <p class="small">Fiat payments, conventional invoicing, and established contractual structures remain the default for early projects. Any blockchain, tokenised, or programmable-settlement component would only be introduced where it delivers a measurable improvement in security, transparency, interoperability, efficiency, or commercial participation, and only after appropriate legal, tax, accounting, procurement, MiCA, and data-protection review.</p>
+  </div>
 </section>
 
 <section id="architecture">
-<div class="container">
-<div class="section-heading">
-<span class="eyebrow">8. Five-Layer Connected Architecture</span>
-<h2>The full infrastructure stack</h2>
-</div>
-<div class="grid-3">
-<div class="card"><span class="number">1</span><h3>Physical Infrastructure</h3><p>Landing and receiving nodes, charging, secure storage, communications hardware, sensors, access systems and maintenance points.</p></div>
-<div class="card"><span class="number">2</span><h3>Aviation and Compliance</h3><p>IAA and EASA pathways, SORA, operational authorisation, planning, insurance, privacy, security and public acceptance.</p></div>
-<div class="card"><span class="number">3</span><h3>Digital Infrastructure</h3><p>Machine identity, encrypted communications, telemetry, edge and cloud computing, booking, operator integration and digital twins.</p></div>
-<div class="card"><span class="number">4</span><h3>Commercial Infrastructure</h3><p>Customer agreements, site rights, operator agreements, project finance, access fees, data rights and maintenance contracts.</p></div>
-<div class="card"><span class="number">5</span><h3>DePIN and Future Settlement</h3><p>Node-host incentives, verifiable telemetry, programmable access fees, machine payments, transparent revenue allocation and cryptographic records.</p></div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">8. Five-Layer Connected Architecture</span>
+      <h2>The full infrastructure stack</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card"><span class="number">1</span><h3>Physical Infrastructure</h3><p>Landing and receiving nodes; charging and energy systems; secure storage; communications hardware; weather, telemetry, and asset-health sensors.</p></div>
+      <div class="card"><span class="number">2</span><h3>Aviation and Compliance</h3><p>IAA and EASA pathways; SORA assessment; operational-authorisation requirements; planning and land-use permissions; insurance; privacy and data protection.</p></div>
+      <div class="card"><span class="number">3</span><h3>Digital Infrastructure</h3><p>Machine and node identity; encrypted communications; remote monitoring; edge and cloud computing; telemetry management; booking and access systems.</p></div>
+      <div class="card"><span class="number">4</span><h3>Commercial Infrastructure</h3><p>Customer agreements; site and land-access rights; operator agreements; project financing; SPV or JV participation; node-access fees; data rights.</p></div>
+      <div class="card"><span class="number">5</span><h3>DePIN and Future Settlement</h3><p>Decentralized infrastructure participation; node-host incentives; verifiable telemetry; programmable access fees; machine-to-machine payments; transparent revenue allocation.</p></div>
+    </div>
+  </div>
 </section>
 
-<section class="section-alt" id="defensibility">
-<div class="container">
-<div class="section-heading">
-<span class="eyebrow">9. Corridor Defensibility</span>
-<h2>Control comes from rights around the corridor—not ownership of airspace</h2>
-<p class="lead">StrataNode does not claim low-altitude airspace. Long-term commercial defensibility is created through contractual, physical, digital and data rights.</p>
-</div>
-<div class="grid-3">
-<div class="card"><h3>Site Rights</h3><p>Options, leases and access agreements over origin and destination nodes, charging sites, rooftops and communications points.</p></div>
-<div class="card"><h3>Development Rights</h3><p>First-refusal, continuing-development, licensing and project-participation rights preserved in feasibility and scoping agreements.</p></div>
-<div class="card"><h3>Digital Coordination</h3><p>Operating or licensing the platform connecting operators, node hosts, charging systems, maintenance providers and weather networks.</p></div>
-<div class="card"><h3>Operational Data Rights</h3><p>Contractual rights to process, anonymise and commercialise defined non-personal utilisation, reliability, charging and route-performance data.</p></div>
-<div class="card"><h3>Project Participation</h3><p>Development fees, management fees, licensing, data revenue, SPV equity and multi-operator access or booking fees.</p></div>
-</div>
-</div>
+<section id="defensibility" class="section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">9. Corridor Defensibility</span>
+      <h2>Control comes from rights around the corridor—not airspace claims</h2>
+      <p class="lead">StrataNode does not claim low-altitude airspace. Long-term commercial defensibility is created entirely through physical, digital, and data rights coordination.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card"><h3>1. Site Rights</h3><p>Securing exclusive options, long-term leases, or access agreements over critical physical chokepoints, including landing nodes, charging sites, and communication hardware nodes.</p></div>
+      <div class="card"><h3>2. Corridor-Development Rights</h3><p>Feasibility and scoping agreements with landowners and partners preserve project-development rights, first-refusal rights, continuing development roles, and permanent SPV equity participation.</p></div>
+      <div class="card"><h3>3. Digital Coordination Layer</h3><p>Operating and licensing the core software layer connecting operators, node hosts, charging systems, maintenance providers, and local weather telemetry assets.</p></div>
+      <div class="card"><h3>4. Trusted Operational Data Layer</h3><p>Contractual rights to collect, process, anonymise, and commercialise non-personal operational data anchored via decentralized architectures into tamper-proof records for logistics auditing.</p></div>
+      <div class="card"><h3>5. Project Equity</h3><p>Extracting structural network value via SPV equity asset ownership, project development milestones, continuing management fees, and multi-operator route access billing.</p></div>
+    </div>
+  </div>
 </section>
 
-<section class="section-alt" id="partners">
-<div class="container">
-<div class="section-heading">
-<span class="eyebrow">10. Delivery Structure</span>
-<h2>StrataNode originates. Qualified partners deliver.</h2>
-<p class="lead">Participation is confirmed project by project. No organisation is presented as a committed partner until an appropriate agreement is in place.</p>
-</div>
-<div class="grid-2">
-<div class="role-panel role-originator">
-<h3>StrataNode Infrastructure</h3>
-<ul>
-<li>Corridor and project origination</li>
-<li>Route and node assessment</li>
-<li>Demand and use-case validation</li>
-<li>Stakeholder and site-access mapping</li>
-<li>Commercial and project structuring</li>
-<li>Partner coordination</li>
-</ul>
-</div>
-<div class="role-panel">
-<h3>Potential project consortium</h3>
-<ul>
-<li>Licensed UAS operators</li>
-<li>Aviation, SORA, planning and legal advisers</li>
-<li>Civil-engineering and construction partners</li>
-<li>Energy, charging and telecommunications providers</li>
-<li>Landowners and infrastructure-site partners</li>
-<li>Potential customers, universities, public bodies and investors</li>
-</ul>
-</div>
-</div>
-</div>
+<section id="partners" class="section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">10. Delivery Structure</span>
+      <h2>StrataNode originates. Qualified partners deliver.</h2>
+      <p class="lead">Participation is confirmed project by project. No organisation is presented as a committed partner until an appropriate formal legal agreement is executed.</p>
+    </div>
+    <div class="grid-2">
+      <div class="role-panel role-originator">
+        <h3>StrataNode Infrastructure</h3>
+        <ul>
+          <li>Corridor and project architectural design</li>
+          <li>Route asset matching and node mapping</li>
+          <li>Industrial B2B demand validation</li>
+          <li>Stakeholder, local planning, and land-access coordination</li>
+          <li>Commercial network structuring and SPV modeling</li>
+          <li>Consortium project assembly</li>
+        </ul>
+      </div>
+      <div class="role-panel">
+        <h3>Potential project consortium</h3>
+        <ul>
+          <li>Licensed UAS and aviation operators</li>
+          <li>Aviation, SORA, planning, and legal compliance advisers</li>
+          <li>Tier-one civil engineering and infrastructure delivery partners</li>
+          <li>Energy, charging, utilities, and telecommunications firms</li>
+          <li>Landowners, port authorities, and industrial site partners</li>
+          <li>Institutional investors, industrial anchors, and public funding bodies</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="pilot">
-<div class="container">
-<div class="section-heading">
-<span class="eyebrow">11. Pilot Opportunity</span>
-<h2>A functional framework for one defined industrial route</h2>
-</div>
-<div class="grid-4">
-<div class="card"><h3>Project composition</h3><p>StrataNode-led origination and architecture, coordinated with qualified engineering, station, networking, UAS-operating and industrial-customer capabilities.</p></div>
-<div class="card"><h3>Clear demand</h3><p>A highly specific point-to-point B2B industrial use case with measurable operational or public value.</p></div>
-<div class="card"><h3>Controlled sites</h3><p>Existing industrial or commercial real-estate footprints used to simplify site access and planning analysis.</p></div>
-<div class="card"><h3>Assessable pathway</h3><p>Secure communications, trusted telemetry and controlled origin and destination sites assessed through formal route analysis, SORA and engagement with the relevant aviation authorities.</p></div>
-</div>
-</div>
-</section>
-
-
-<section class="section-alt" id="funding">
-<div class="container">
-<div class="section-heading">
-<span class="eyebrow">12. Funding Pathways</span>
-<h2>Broadening the innovation horizon</h2>
-<p class="lead">By integrating physical infrastructure with secure digital coordination, StrataNode may qualify for a broader range of innovation programmes than a conventional aviation or construction project. All opportunities remain subject to eligibility and call-specific requirements.</p>
-</div>
-<div class="grid-3">
-<div class="card"><h3>Aviation and space demonstrations</h3><p>Potential SESAR 3 Joint Undertaking and Digital European Sky research and demonstration calls.</p></div>
-<div class="card"><h3>Smart infrastructure and connectivity</h3><p>Potential Horizon Europe frameworks concerning secure IoT, machine connectivity, distributed-ledger innovation and digital-twin infrastructure.</p></div>
-<div class="card"><h3>National innovation supports</h3><p>Potential Enterprise Ireland feasibility and innovation supports and Disruptive Technologies Innovation Fund consortium opportunities.</p></div>
-</div>
-<div class="guardrail" style="margin-top:24px;">
-<strong>Funding position:</strong> StrataNode seeks support for secure, interoperable and commercially viable low-altitude infrastructure—not speculative crypto-token development.
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">11. Pilot Opportunity</span>
+      <h2>Start with one defined industrial route footprint</h2>
+      <p class="lead">Initial demonstration routes focus strictly on highly specific, point-to-point B2B industrial pathways to maximize operational defensibility.</p>
     </div>
-</div>
+    <div class="grid-4">
+      <div class="card"><h3>Project Composition</h3><p>Initiated by StrataNode (Origination & Architecture) in coordination with civil engineering, autonomous station, secure networking, and licensed UAS operator providers.</p></div>
+      <div class="card"><h3>Clear Demand</h3><p>Focused on specific B2B industrial routes (such as regional material processing or data sampling), bypassing consumer delivery bottlenecks.</p></div>
+      <div class="card"><h3>Controlled Sites</h3><p>Leveraging existing industrial footprints and private commercial real estate assets to streamline localized local planning footprints.</p></div>
+      <div class="card"><h3>Assessable Pathway</h3><p>The pilot would examine whether secure peer-to-peer communications, trusted telemetry and controlled industrial origin and destination sites could support a manageable initial operating concept. Any ground-risk classification or regulatory suitability would require formal route analysis, SORA assessment and engagement with the relevant aviation authorities.</p></div>
+    </div>
+  </div>
 </section>
 
+<section id="funding" class="section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">12. Funding Pathways</span>
+      <h2>Broadening the innovation funding horizon</h2>
+      <p class="lead">By integrating civil engineering blueprints with zero-trust machine overlays, StrataNode maps to a broad spectrum of non-dilutive capital calls.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card"><h3>Aviation & Space Demonstrations</h3><p>SESAR 3 Joint Undertaking innovation calls. (Notably, SESAR’s Digital European Sky programme has supported advanced aviation research through substantial investment, representing over €350 million across 42 projects announced in February 2026).</p></div>
+      <div class="card"><h3>Smart Infrastructure & Connectivity</h3><p>Horizon Europe frameworks focused on secure IoT deployment, mobile communications resilience, distributed ledger infrastructure, and digital twin network coordination.</p></div>
+      <div class="card"><h3>National Innovation Supports</h3><p>Enterprise Ireland feasibility grants, commercial innovative project supports, and consortium assembly paths via the Disruptive Technologies Innovation Fund (DTIF).</p></div>
+    </div>
+    <p class="small" style="margin-top: 16px; color: var(--muted);">StrataNode tracks funding applications focusing strictly on operational network efficiency, trusted machine data, and secure physical-layer infrastructure. The company does not seek speculative crypto-token innovation funding.</p>
+  </div>
+</section>
 
 <section id="commercial">
-<div class="container">
-<div class="section-heading">
-<span class="eyebrow">13. Commercial Structure</span>
-<h2>Project-specific participation</h2>
-</div>
-<p class="lead">A viable corridor may be structured through an independent Special Purpose Vehicle after customer demand, aviation and planning pathways, site access, operator participation, construction requirements and project economics have been validated.</p>
-<div class="grid-2">
-<div class="card">
-<h3>A project-specific SPV could ring-fence</h3>
-<ul>
-<li>Contractual liabilities</li>
-<li>Site and land-access agreements</li>
-<li>Planning permissions</li>
-<li>Technology and operator agreements</li>
-<li>Infrastructure assets and data rights</li>
-<li>Project financing and revenue participation</li>
-</ul>
-</div>
-<div class="guardrail">
-<h3>Validation before structure</h3>
-<p>Where a corridor subsequently develops proven contractual revenues, the SPV may provide a structure through which private, strategic, institutional or public-sector capital can participate.</p>
-<p>SPV formation should follow feasibility and project validation rather than precede them.</p>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">13. Commercial Structure</span>
+      <h2>Commercial Structure: Project-Specific Participation</h2>
+      <p class="lead">A viable corridor may be structured through an independent Special Purpose Vehicle after customer demand, aviation and planning pathways, site access, operator participation, construction requirements and project economics have been validated.</p>
+    </div>
+    <p>A project-specific SPV could ring-fence: <strong>contractual liabilities; site and land-access agreements; planning permissions; technology and operator agreements; infrastructure assets; data rights; project financing; and revenue participation.</strong> Where a corridor subsequently develops proven contractual revenues, the SPV may provide a structure through which private, strategic, institutional or public-sector capital can participate. SPV formation should follow feasibility and partner validation rather than precede them.</p>
+    <div class="table-wrap" style="margin-top: 30px;">
+      <table>
+        <thead><tr><th>Project Component Asset Layer</th><th>Targeted Realization Structure within SPV</th></tr></thead>
+        <tbody>
+          <tr><td>Corridor Architecture & Rights</td><td>StrataNode Infrastructure via development rights and licensing allocations</td></tr>
+          <tr><td>Compliance and Risk Translation</td><td>StrataNode Engine integration overseen by independent qualified legal and aviation advisors</td></tr>
+          <tr><td>Civil Works and Ground Nodes</td><td>Tier-one construction joint ventures and modular physical assembly contractors</td></tr>
+          <tr><td>UAS Flight Operations</td><td>Licensed multi-operator or anchor aviation entities running under defined SLA terms</td></tr>
+          <tr><td>Site footprint access</td><td>Long-term commercial options, site leases, or municipal partner data-access right agreements</td></tr>
+          <tr><td>Project Infrastructure Finance</td><td>Strategic industrial anchor, private utility, or institutional infrastructure funds</td></tr>
+          <tr><td>Target B2B Pipeline Demand</td><td>Industrial logistics corporations, diagnostic health networks, or municipal environmental monitoring anchors</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </section>
 
-<section class="section-alt" id="roadmap">
-<div class="container">
-<div class="section-heading">
-<span class="eyebrow">14. Development Roadmap</span>
-<h2>Progress through staged validation</h2>
-<p class="lead">Each stage depends on validated demand, regulatory readiness, site access, funding and partner participation.</p>
-</div>
-<div class="roadmap-grid">
-<div class="roadmap-card"><span class="roadmap-number">1</span><h3>Identify Opportunities</h3><p>Map potential corridors, infrastructure nodes and priority use cases.</p></div>
-<div class="roadmap-card"><span class="roadmap-number">2</span><h3>Test Feasibility</h3><p>Assess demand, regulation, safety, planning, site access, costs and required partners.</p></div>
-<div class="roadmap-card"><span class="roadmap-number">3</span><h3>Demonstrate the Route</h3><p>Develop a controlled pilot with licensed operators and partner-owned aircraft.</p></div>
-<div class="roadmap-card"><span class="roadmap-number">4</span><h3>Structure the Project</h3><p>Secure sites, define roles, arrange funding and select the appropriate project structure.</p></div>
-<div class="roadmap-card"><span class="roadmap-number">5</span><h3>Expand the Network</h3><p>Replicate successful corridor models across additional regions and sectors.</p></div>
-<div class="roadmap-card"><span class="roadmap-number">6</span><h3>Coordinate the Network</h3><p>Develop the systems connecting operators, infrastructure, data and customers.</p></div>
-</div>
-</div>
+<section id="roadmap" class="section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">14. Development Roadmap</span>
+      <h2>Progress through staged architectural validation</h2>
+      <p class="lead">Execution milestones are segmented to isolate risk, ensuring engineering works are only committed following definitive regulatory and customer signoffs.</p>
+    </div>
+    <div class="roadmap-grid">
+      <div class="roadmap-card"><span class="roadmap-number">1</span><h3>Identify Opportunities</h3><p>Map structural industrial chokepoints, point-to-point corridor options, and prospective high-volume anchor users.</p></div>
+      <div class="roadmap-card"><span class="roadmap-number">2</span><h3>Test Feasibility</h3><p>Deploy a 60-day window covering spatial ground risk parameters, network connectivity options, and local land access scoping.</p></div>
+      <div class="roadmap-card"><span class="roadmap-number">3</span><h3>Demonstrate the Route</h3><p>Initiate controlled regional demonstration flights using licensed operator consortiums and vendor-agnostic infrastructure assets.</p></div>
+      <div class="roadmap-card"><span class="roadmap-number">4</span><h3>Structure the Project</h3><p>Incorporate the independent standalone project SPV, execute final long-term node leases, and secure capital allocations.</p></div>
+      <div class="roadmap-card"><span class="roadmap-number">5</span><h3>Expand the Network</h3><p>Scale successful node modules across additional adjacent point-to-point industrial geographic coordinates.</p></div>
+      <div class="roadmap-card"><span class="roadmap-number">6</span><h3>Coordinate the Network</h3><p>Deploy the overarching machine connectivity overlay for automated scheduling, telemetry auditing, and programmable settlement options.</p></div>
+    </div>
+  </div>
 </section>
 
 <section id="risks">
-<div class="container">
-<div class="section-heading">
-<span class="eyebrow">15. Risks and Policy-Informed Pre-Mortem</span>
-<h2>What could go wrong?</h2>
-</div>
-<div class="grid-3">
-<div class="card"><h3>Market timing</h3><p>Focus on immediate B2B commercial utility rather than speculative consumer adoption.</p></div>
-<div class="card"><h3>Regulatory delay</h3><p>Use route-specific feasibility and formal SORA assessment rather than assuming a low-risk route is automatically approvable.</p></div>
-<div class="card"><h3>Connectivity and cyber disruption</h3><p>Evaluate redundant communications, secure peer-to-peer networking, edge processing and zero-trust device identity during system design.</p></div>
-<div class="card"><h3>Customer uncertainty</h3><p>Use the technical-scoping phase to quantify operational efficiencies before seeking binding commitments.</p></div>
-<div class="card"><h3>Public and planning friction</h3><p>Prioritise transparent, benefit-led projects addressing environmental, industrial or public-good use cases.</p></div>
-<div class="card"><h3>The consultancy trap</h3><p>Preserve StrataNode’s potential future role through development rights, site rights, licensing, data rights, management responsibilities, SPV participation or agreed revenue sharing.</p></div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">15. Risks and Policy-Informed Pre-Mortem</span>
+      <h2>What could go wrong? Direct mitigations.</h2>
+      <p class="lead">The architecture must survive practical structural, digital, regulatory, and commercial challenges before structuring projects for capital markets.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card"><h3>Market Timing</h3><p>Policy may shift faster than industrial uptake. <em>Mitigation:</em> Focus completely on high-utility B2B supply corridors where real-world operational ROI offsets early market fragmentation.</p></div>
+      <div class="card"><h3>Regulatory Delay</h3><p>Airspace routes face extensive approval backlogs. <em>Mitigation:</em> Design corridors with exceptionally low ground-risk profiles to fit cleanly within existing IAA and EASA SORA parameters.</p></div>
+      <div class="card"><h3>Network Connectivity and Cyber Disruption</h3><p>Mobile and fragmented communications environments may create latency, network-handover, telemetry-continuity and cyber-resilience risks. <em>Mitigation:</em> Evaluate redundant communications, secure peer-to-peer networking, edge processing and zero-trust device identity during system design.</p></div>
+      <div class="card"><h3>Customer Uncertainty</h3><p>Industrial corporations resist infrastructure locking. <em>Mitigation:</em> Utilize the technical scoping window to build modular pilot data proving clear bottom-line savings before requesting long-term binding SLAs.</p></div>
+      <div class="card"><h3>Public and Planning Friction</h3><p>Noise and localized privacy anxieties can halt physical sites. <em>Mitigation:</em> Map corridor utility directly to regional environmental tracking, safety, and community public-good applications.</p></div>
+      <div class="card"><h3>The Consultancy Trap</h3><p>StrataNode risks exhausting its resources producing static consulting reports that outside entities commercialize. <em>Mitigation:</em> Ensure that feasibility, scoping and development agreements preserve StrataNode’s potential future role through development rights, site rights, licensing, data rights, management responsibilities, SPV participation or agreed revenue-sharing arrangements.</p></div>
+    </div>
+  </div>
 </section>
 
-
-<section class="section-alt" id="first-step">
-<div class="container">
-<div class="section-heading">
-<span class="eyebrow">16. Proposed First Step</span>
-<h2>One structured corridor-feasibility exercise</h2>
-</div>
-<div class="grid-2">
-<div class="card">
-<h3>Technical and spatial scoping window</h3>
-<p>StrataNode proposes a defined scoping exercise for one preliminary industrial route, covering route logic, indicative ground-risk conditions, site access, customer demand, infrastructure requirements, operator needs and commercial structure.</p>
-<p>The exercise would also include a digital-infrastructure blueprint assessing secure networking, data latency, cryptographic node identity and interoperability requirements.</p>
-</div>
-<div class="guardrail">
-<h3>Institutional guardrail</h3>
-<p>The project may be described as a potential industry-led demonstrator aligned with the objectives of Ireland’s National Policy Framework for UAS. This does not imply government appointment, regulatory approval or State endorsement.</p>
-</div>
-</div>
-</div>
+<section id="first-step" class="section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">16. Proposed First Step</span>
+      <h2>One structured corridor-feasibility exercise</h2>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>60-Day Technical and Spatial Scoping Window</h3>
+        <p>StrataNode intends to map the specific coordinate data and initial ground-risk profiles for a preliminary industrial route linking targeted facilities.</p>
+        <p>This scoping phase will explicitly include a digital infrastructure blueprint simulating a zero-trust network overlay across the targeted facilities to validate firewall traversal, data latency, and cryptographic node-identity management. It is designed as an industry-led demonstrator matching the milestones of Action 15 of the National Policy Framework.</p>
+      </div>
+      <div class="guardrail">
+        <h3>Institutional guardrail</h3>
+        <p>This document does not state or imply that StrataNode is a state-appointed delivery vehicle, nor does it claim privileged regulatory access. StrataNode is positioned strictly as a private-sector infrastructure originator providing the physical real estate assets, digital coordination layers, and compliance frameworks necessary to support the commercial execution of Ireland's public UAS policy objectives.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="section-dark discussion" id="discussion">
-<div class="container">
-<span class="eyebrow">Open Discussion</span>
-<h2>Review it. Challenge it. Improve it.</h2>
-<p class="lead">This is an early-stage strategic framework intended to invite practical criticism and collaboration from aviation specialists, infrastructure partners, regulators, operators, investors and public-sector stakeholders.</p>
-<div class="hero-actions" style="justify-content:center">
-<a class="button button-primary" href="https://github.com/stratanode-infrastructure/StrataNode-Infrastructure-Ltd/issues/new" rel="noopener noreferrer" target="_blank">Submit Feedback on GitHub</a>
-<a class="button button-secondary" href="https://github.com/stratanode-infrastructure/StrataNode-Infrastructure-Ltd" rel="noopener noreferrer" target="_blank">View the Repository</a>
-</div>
-</div>
+<section id="discussion" class="section-dark discussion">
+  <div class="container">
+    <span class="eyebrow">Open Discussion</span>
+    <h2>Review it. Challenge it. Improve it.</h2>
+    <p class="lead">This is an early-stage strategic framework intended to invite practical criticism and collaboration from aviation specialists, infrastructure partners, regulators, operators, investors and public-sector stakeholders.</p>
+    <div class="hero-actions" style="justify-content:center">
+      <a class="button button-primary" href="https://github.com/stratanode-infrastructure/StrataNode-Infrastructure-Ltd/issues/new" target="_blank" rel="noopener noreferrer">Submit Feedback on GitHub</a>
+      <a class="button button-secondary" href="https://github.com/stratanode-infrastructure/StrataNode-Infrastructure-Ltd" target="_blank" rel="noopener noreferrer">View the Repository</a>
+    </div>
+  </div>
 </section>
 </main>
+
 <footer>
-<div class="container footer-grid">
-<div><strong>StrataNode Infrastructure Ltd</strong><p>Strategic Briefing Document</p></div>
-<div><p>Connecting Ireland’s Low-Altitude Economy through corridor identification, compliance, commercialisation and qualified infrastructure partnerships.</p><p class="small">Working framework — for review, challenge and feedback.</p></div>
-</div>
+  <div class="container footer-grid">
+    <div><strong>StrataNode Infrastructure Ltd</strong><p>Strategic Briefing Document</p></div>
+    <div><p>Connecting Ireland’s Low-Altitude Economy through corridor identification, compliance, commercialisation and qualified infrastructure partnerships.</p><p class="small">Working framework — for review, challenge and feedback.</p></div>
+  </div>
 </footer>
 </body>
 </html>
