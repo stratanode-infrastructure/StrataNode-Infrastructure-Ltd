@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="A neutral, evidence-led public industry discussion paper on a UAS-first infrastructure framework for Ireland's emerging low-altitude economy." name="description"/>
+<title>StrataNode Infrastructure | Public Industry Discussion Paper</title>
+<style>
+    :root{
+      --navy:#071f33;
+      --navy-2:#0b2e43;
+      --teal:#50c9a7;
+      --teal-dark:#0b6b59;
+      --mint:#e8f7f2;
+      --off:#f5f8fa;
+      --white:#ffffff;
+      --text:#12263a;
+      --muted:#5d6d7d;
+      --border:#d7e1e8;
+      --gold:#d9a340;
+      --max:1180px;
+      --shadow:0 18px 50px rgba(7,31,51,.12);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
+      background:var(--white);
+      line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(var(--max),calc(100% - 40px));margin:auto}
+    header{
+      position:sticky;
+      top:0;
+      z-index:30;
+      background:rgba(7,31,51,.97);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      min-height:82px;
+    }
+    .brand{display:flex;align-items:center;gap:14px;color:#fff}
+    .brand-mark{
+      width:52px;height:52px;border:2px solid var(--teal);border-radius:15px;
+      display:grid;place-items:center;transform:rotate(45deg);flex:0 0 auto;
+    }
+    .brand-mark span{transform:rotate(-45deg);font-weight:800;color:var(--teal)}
+    .brand-name{font-size:1.05rem;font-weight:800;line-height:1.15}
+    .brand-name small{
+      display:block;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;
+      color:#aac0cf;margin-top:4px;
+    }
+    .nav-links{display:flex;align-items:center;gap:20px;color:#fff;font-weight:650;font-size:.92rem}
+    .nav-button{border:1px solid var(--teal);border-radius:999px;padding:11px 18px;color:var(--teal)}
+    .hero{
+      background:
+        radial-gradient(circle at 88% 45%,rgba(80,201,167,.26),transparent 28%),
+        linear-gradient(135deg,var(--navy),#073a4c);
+      color:#fff;padding:90px 0 82px;overflow:hidden;
+    }
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+    .eyebrow{
+      text-transform:uppercase;letter-spacing:.16em;font-size:.76rem;font-weight:800;color:var(--teal);
+    }
+    h1{font-size:clamp(3rem,7vw,6rem);line-height:.96;letter-spacing:-.055em;margin:20px 0 28px;max-width:760px}
+    .accent{color:var(--teal)}
+    .hero-copy{font-size:1.18rem;color:#d9e6ed;max-width:720px}
+    .hero-note{
+      margin-top:24px;padding:18px 20px;border-left:4px solid var(--gold);
+      background:rgba(255,255,255,.07);border-radius:8px;color:#e6eef3;
+    }
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+    .button{
+      display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;
+      border-radius:8px;font-weight:800;border:1px solid transparent;
+    }
+    .button-primary{background:var(--teal);color:var(--navy)}
+    .button-secondary{border-color:#7891a2;color:#fff}
+    .layer-card{
+      background:rgba(4,31,45,.7);border:1px solid rgba(255,255,255,.14);
+      border-radius:22px;padding:38px;box-shadow:var(--shadow);
+    }
+    .layer-list{display:grid;gap:14px;margin-top:24px}
+    .layer-item{
+      display:flex;align-items:center;gap:14px;padding:14px 16px;
+      border:1px solid rgba(255,255,255,.12);border-radius:12px;background:rgba(255,255,255,.04);
+    }
+    .layer-num{
+      width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+      background:var(--teal);color:var(--navy);font-weight:900;flex:0 0 auto;
+    }
+    section{padding:88px 0}
+    .section-alt{background:var(--off)}
+    .section-dark{background:var(--navy);color:#fff}
+    .section-heading{max-width:900px;margin-bottom:44px}
+    h2{font-size:clamp(2.2rem,5vw,4rem);line-height:1.05;letter-spacing:-.04em;margin:14px 0 18px}
+    h3{font-size:1.28rem;margin:0 0 12px}
+    .lead{font-size:1.12rem;color:var(--muted)}
+    .section-dark .lead{color:#c1d0da}
+    .grid-2,.grid-3,.grid-4,.grid-5{display:grid;gap:24px}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-4{grid-template-columns:repeat(4,1fr)}
+    .grid-5{grid-template-columns:repeat(5,1fr)}
+    .card{
+      background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px;
+      box-shadow:0 8px 24px rgba(7,31,51,.05);
+    }
+    .section-dark .card{background:#0d3045;border-color:#214a61}
+    .number{
+      display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;
+      background:var(--mint);color:var(--teal-dark);font-weight:900;margin-bottom:16px;
+    }
+    .tag{
+      display:inline-block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+      font-weight:800;color:var(--teal-dark);margin-bottom:12px;
+    }
+    .policy-band{
+      background:linear-gradient(90deg,var(--mint),#eef0ff);
+      border:1px solid #bcdcd2;border-radius:18px;padding:32px;
+    }
+    ul{padding-left:1.25rem}
+    li{margin:.45rem 0}
+    .roadmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .roadmap-card{border:1px solid var(--border);background:#fff;border-radius:16px;padding:26px}
+    .roadmap-number{font-size:2.1rem;font-weight:900;color:var(--teal)}
+    .guardrail{border-left:5px solid var(--gold);background:#fff7e9;padding:24px;border-radius:10px}
+    .question{border-top:1px solid var(--border);padding:18px 0}
+    .question:first-child{border-top:0;padding-top:0}
+    .discussion{text-align:center}
+    .source-list{font-size:.95rem;color:var(--muted)}
+    footer{background:#041725;color:#c5d2da;padding:48px 0}
+    .footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+    .small{font-size:.9rem;color:var(--muted)}
+    @media(max-width:1000px){
+      .nav-links{display:none}
+      .hero-grid,.grid-2,.grid-3,.grid-4,.grid-5,.roadmap-grid,.footer-grid{grid-template-columns:1fr}
+      .hero{padding-top:65px}
+      h1{font-size:3.6rem}
+    }
+  
+    .scope-band{
+      margin:34px 0 30px;padding:30px;border:1px solid #bcdcd2;border-radius:18px;
+      background:linear-gradient(135deg,var(--mint),#f4fbf8);
+    }
+    .scope-band strong{color:var(--teal-dark)}
+    .table-wrap{overflow-x:auto;margin-top:28px;border:1px solid var(--border);border-radius:16px;background:#fff}
+    table{width:100%;border-collapse:collapse;min-width:760px}
+    th,td{padding:16px 18px;text-align:left;vertical-align:top;border-bottom:1px solid var(--border)}
+    th{background:var(--navy);color:#fff;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase}
+    tr:last-child td{border-bottom:0}
+    .screen-list{display:grid;gap:14px;margin-top:24px}
+    .screen-item{
+      display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;
+      border:1px solid var(--border);border-radius:14px;padding:18px;background:#fff;
+    }
+    .screen-mark{
+      width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+      background:var(--mint);color:var(--teal-dark);font-weight:900;
+    }
+    .notice{
+      margin-top:26px;padding:22px 24px;border-left:5px solid var(--teal);
+      border-radius:10px;background:#eefaf6;
+    }
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+<a class="brand" href="#top">
+<div class="brand-mark"><span>S</span></div>
+<div class="brand-name">StrataNode Infrastructure
+        <small>Public Industry Discussion Paper</small>
+</div>
+</a>
+<nav aria-label="Main navigation" class="nav-links">
+<a href="#purpose">Purpose</a>
+<a href="#why-now">Why Now</a>
+<a href="#framework">Framework</a>
+<a href="#technology">Technology</a>
+<a href="#governance">Governance</a>
+<a href="#questions">Open Questions</a>
+<a class="nav-button" href="#discussion">Review and Challenge</a>
+</nav>
+</div>
+</header>
+<main id="top">
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<span class="eyebrow">Public Industry Discussion Paper</span>
+<h1>Connecting Ireland’s <span class="accent">Low-Altitude Economy</span></h1>
+<p class="hero-copy">A neutral framework for discussing the physical, regulatory, digital and commercial infrastructure required to support secure, interoperable, multi-operator low-altitude networks.</p>
+<div class="hero-note">
+        This paper is intended to invite practical review from aviation, infrastructure, engineering, planning, technology, insurance, legal, public-sector and industrial stakeholders. It is not a fundraising document, procurement proposal or claim of regulatory endorsement.
+      </div>
+<div class="hero-actions">
+<a class="button button-primary" href="#framework">Explore the Framework</a>
+<a class="button button-secondary" href="#discussion">Review and Challenge</a>
+</div>
+</div>
+<div class="layer-card">
+<span class="eyebrow">Proposed Infrastructure Stack</span>
+<div class="layer-list">
+<div class="layer-item"><span class="layer-num">1</span><strong>Physical Infrastructure</strong></div>
+<div class="layer-item"><span class="layer-num">2</span><strong>Aviation and Compliance</strong></div>
+<div class="layer-item"><span class="layer-num">3</span><strong>Digital Infrastructure</strong></div>
+<div class="layer-item"><span class="layer-num">4</span><strong>Commercial Operation</strong></div>
+<div class="layer-item"><span class="layer-num">5</span><strong>Optional Future DePIN and Settlement</strong></div>
+</div>
+</div>
+</div>
+</section>
+<section id="purpose">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">1. Purpose and Scope</span>
+<h2>A working framework for industry review</h2>
+<p class="lead">The paper examines whether Ireland will require a coordinated physical and digital ground layer to support repeatable, commercially useful UAS operations, and how that work could provide a practical entry point into the wider Low-Altitude Economy.</p>
+</div>
+<div class="scope-band">
+<h3>UAS first, with wider infrastructure relevance assessed over time</h3>
+<p><strong>StrataNode is developing a UAS-first infrastructure framework as the practical entry point into Ireland’s Low-Altitude Economy.</strong> Near-term work focuses on industrial drone corridors. Selected sites, digital systems and governance standards developed through that work will be assessed for relevance to larger autonomous cargo and Advanced Air Mobility applications as those categories mature.</p>
+<p>This does not imply that infrastructure designed for small UAS can automatically support larger cargo aircraft or passenger eVTOL operations. Any future extension would require separate assessment of aircraft performance, structural loading, energy demand, emergency response, passenger safety, accessibility, noise, certification and planning requirements.</p>
+</div>
+
+<div class="grid-3">
+<div class="card">
+<h3>What this paper proposes</h3>
+<p>A structured method for identifying corridors, testing feasibility, coordinating compliance, defining infrastructure requirements and assessing potential pilot routes.</p>
+</div>
+<div class="card">
+<h3>What this paper does not claim</h3>
+<p>It does not claim ownership of airspace, regulatory approval, State appointment, procurement status, exclusive rights, committed routes, committed operators, committed partners or a predetermined technology solution.</p>
+</div>
+<div class="card">
+<h3>What feedback is sought</h3>
+<p>Challenge on safety, regulation, planning, engineering, connectivity, commercial demand, data governance, public acceptance, delivery structure and practical sequencing.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section-alt" id="why-now">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">2. Why Now</span>
+<h2>Policy is advancing while the ground layer remains immature</h2>
+</div>
+<div class="grid-4">
+<div class="card">
+<h3>Policy transition</h3>
+<p>Ireland’s National Policy Framework for Unmanned Aircraft Systems was launched in August 2025 as a living framework intended to guide the sector’s development.</p>
+</div>
+<div class="card">
+<h3>Regulatory capability</h3>
+<p>Ireland has established regulatory experience with complex UAS operations, including the IAA’s 2021 issuance of a BVLOS-capable Light UAS Operator Certificate.</p>
+</div>
+<div class="card">
+<h3>International learning</h3>
+<p>European initiatives are testing combinations of automated ground stations, secure machine communications, trusted telemetry and future programmable infrastructure access.</p>
+</div>
+<div class="card">
+<h3>Infrastructure question</h3>
+<p>Aircraft, software and airspace services are developing rapidly, but the physical sites, energy, connectivity, access, maintenance and commercial coordination needed for repeatable operations remain fragmented.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="policy">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">3. Policy and Regulatory Context</span>
+<h2>Alignment without implying endorsement</h2>
+<p class="lead">A private-sector corridor concept must operate within existing aviation, planning, safety, privacy, environmental and public-governance requirements.</p>
+</div>
+<div class="policy-band">
+<div class="grid-3">
+<div>
+<h3>Airspace and planning</h3>
+<p>Projects would need to consider geographical zones, local planning, land use, site access, public consultation and any future U-space arrangements.</p>
+</div>
+<div>
+<h3>Operational safety</h3>
+<p>Any flight operation would remain the responsibility of appropriately authorised operators and would require assessment under the relevant IAA and EASA framework, including SORA where applicable.</p>
+</div>
+<div>
+<h3>Data and public trust</h3>
+<p>Privacy, cybersecurity, data ownership, environmental impact, noise, transparency and public acceptance must be considered from the earliest feasibility stage.</p>
+</div>
+</div>
+</div>
+<p class="small">Policy alignment does not confer procurement status, regulatory approval, funding eligibility, preferential treatment or State endorsement.</p>
+</div>
+</section>
+<section class="section-alt" id="capabilities">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">4. Capability Requirements</span>
+<h2>No single organisation can deliver the full system alone</h2>
+<p class="lead">A credible corridor would require coordinated specialist capability, with aviation operation, infrastructure development, regulatory approval and commercial participation kept distinct and responsibilities defined project by project.</p>
+</div>
+<div class="grid-4">
+<div class="card"><h3>Aviation and operations</h3><p>Licensed UAS operations, operational authorisation, SORA, safety management, maintenance, emergency procedures and insurance.</p></div>
+<div class="card"><h3>Planning and infrastructure</h3><p>Land access, planning, civil engineering, energy, charging, communications, security, maintenance and resilience.</p></div>
+<div class="card"><h3>Digital and data systems</h3><p>Machine identity, connectivity, cybersecurity, telemetry, booking, access control, interoperability, data governance and audit.</p></div>
+<div class="card"><h3>Commercial and public interfaces</h3><p>Industrial demand, customer requirements, public engagement, local authorities, legal agreements and project governance.</p></div>
+</div>
+</div>
+</section>
+<section id="framework">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">5. The 5 Cs Framework</span>
+<h2>A proposed stage-gate method</h2>
+<p class="lead">The 5 Cs describe how a corridor concept could progress. Each stage should contain clear evidence requirements and a stop/go decision.</p>
+</div>
+<div class="grid-5">
+<div class="card"><span class="number">1</span><h3>Corridors</h3><p>Is there a defined route, suitable origin and destination sites, and a clear operational use case?</p></div>
+<div class="card"><span class="number">2</span><h3>Compliance</h3><p>Is there a credible aviation, planning, safety, privacy and insurance pathway?</p></div>
+<div class="card"><span class="number">3</span><h3>Construction</h3><p>Can the required nodes, power, access, communications and security be permitted, built and maintained?</p></div>
+<div class="card"><span class="number">4</span><h3>Commercialisation</h3><p>Is there a real customer requirement, sufficient operational volume and a viable delivery model?</p></div>
+<div class="card"><span class="number">5</span><h3>Connectivity</h3><p>Can operators, nodes, systems, data and access controls interoperate securely and reliably?</p></div>
+</div>
+<p class="small">The 5 Cs describe the development process; the five-layer architecture below describes what an operational corridor may contain.</p>
+</div>
+</section>
+<section class="section-dark" id="difference">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">6. What Differentiates the Proposed Model</span>
+<h2>Integration across the full enabling layer</h2>
+<p class="lead">The model is not centred on one aircraft, operator, station or software platform. It focuses on coordinating the system around the operation.</p>
+</div>
+<div class="grid-3">
+<div class="card"><h3>Technology-agnostic</h3><p>Corridors can adopt appropriate technologies without being permanently dependent on one supplier or platform.</p></div>
+<div class="card"><h3>Physical and digital integration</h3><p>Sites, energy, charging, access, communications, telemetry, booking and operational data are considered as one infrastructure system.</p></div>
+<div class="card"><h3>Multi-operator interoperability</h3><p>The architecture asks how shared nodes could support different authorised operators under defined technical and commercial rules.</p></div>
+<div class="card"><h3>Rights and governance</h3><p>Site access, development rights, data rights, responsibilities, liabilities and continuing coordination roles must be negotiated explicitly.</p></div>
+<div class="card"><h3>Phased technology adoption</h3><p>Current technologies can support early pilots, while emerging capabilities are introduced only where they solve a demonstrated problem.</p></div>
+<div class="card"><h3>Review before scale</h3><p>No expansion is proposed until demand, safety, planning, infrastructure, connectivity and governance have been validated.</p></div>
+</div>
+</div>
+</section>
+<section class="section-alt" id="technology">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">7. Enabling Technology Landscape</span>
+<h2>Essential now, optional next, future only</h2>
+<p class="lead">The first pilot should use the minimum technology required to prove safe and useful operation.</p>
+</div>
+<div class="grid-3">
+<div class="card">
+<span class="tag">Pilot-essential</span>
+<h3>Operational infrastructure</h3>
+<ul>
+<li>Safe landing and receiving areas</li>
+<li>Power and charging where required</li>
+<li>Secure communications and telemetry</li>
+<li>Weather and asset monitoring</li>
+<li>Access control and operational logging</li>
+<li>Emergency and maintenance arrangements</li>
+</ul>
+</div>
+<div class="card">
+<span class="tag">Pilot-optional</span>
+<h3>Intelligent coordination</h3>
+<ul>
+<li>Automated docking or drone-in-a-box systems</li>
+<li>Digital twins</li>
+<li>Predictive maintenance</li>
+<li>Automated booking and capacity allocation</li>
+<li>Machine-readable access rules</li>
+<li>Tamper-evident operational records</li>
+</ul>
+</div>
+<div class="card">
+<span class="tag">Future only</span>
+<h3>DePIN and programmable settlement</h3>
+<ul>
+<li>Approved node-host participation</li>
+<li>Machine-to-machine access payments</li>
+<li>Transparent revenue allocation</li>
+<li>Verifiable non-personal data services</li>
+<li>Cryptographic audit records</li>
+<li>Tokenised incentives where lawful and justified</li>
+</ul>
+</div>
+</div>
+<p class="small">Conventional contracts, fiat payments and established governance should remain the default for early projects. No personal, sensitive, restricted or public-sector data should be commercialised without explicit contractual authority and appropriate data-protection review.</p>
+</div>
+</section>
+<section id="architecture">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">8. Five-Layer Connected Architecture</span>
+<h2>A proposed technical reference model</h2>
+</div>
+<div class="grid-3">
+<div class="card"><span class="number">1</span><h3>Physical Infrastructure</h3><p>Sites, landing and receiving areas, power, charging, secure storage, communications hardware, sensors, access systems and maintenance points.</p></div>
+<div class="card"><span class="number">2</span><h3>Aviation and Compliance</h3><p>Operational authorisation, SORA, planning, land use, insurance, privacy, security, environmental assessment and public acceptance.</p></div>
+<div class="card"><span class="number">3</span><h3>Digital Infrastructure</h3><p>Machine identity, encrypted communications, telemetry, edge and cloud systems, remote monitoring, booking and operator integration.</p></div>
+<div class="card"><span class="number">4</span><h3>Commercial Operation</h3><p>Customer requirements, operator agreements, site agreements, service levels, maintenance responsibilities, fees and governance.</p></div>
+<div class="card"><span class="number">5</span><h3>Optional Future Layer</h3><p>DePIN participation, programmable access, verifiable records and automated settlement where they provide a measurable operational benefit.</p></div>
+</div>
+</div>
+</section>
+<section class="section-alt" id="governance">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">9. Corridor Rights and Governance</span>
+<h2>Rights must be negotiated; they do not arise automatically</h2>
+<p class="lead">The proposed model does not claim ownership of low-altitude airspace. StrataNode’s proposed role is infrastructure origination, structuring, de-risking and coordination; aircraft operation, regulatory approval, asset ownership and commercial participation would remain with the appropriately authorised or contracted parties.</p>
+</div>
+<div class="grid-3">
+<div class="card"><h3>Site and access rights</h3><p>Options, leases, licences or access agreements for origin, destination, charging, communications and maintenance locations.</p></div>
+<div class="card"><h3>Development and coordination rights</h3><p>Any continuing development, first-refusal, licensing, management or participation role must be expressly agreed in contract.</p></div>
+<div class="card"><h3>Data rights</h3><p>Ownership, access, processing, retention and permitted use of operational data must be agreed between operators, customers, site owners and system providers.</p></div>
+<div class="card"><h3>Accountability</h3><p>Responsibility for aviation safety, construction safety, cybersecurity, planning, insurance, maintenance and public engagement must be allocated clearly.</p></div>
+<div class="card"><h3>Potential project vehicle</h3><p>A dedicated project entity may eventually be appropriate to hold site agreements, infrastructure assets, operator contracts and liabilities, subject to feasibility and legal review.</p></div>
+<div class="card"><h3>Public-interest safeguards</h3><p>Governance should include safety reporting, privacy controls, security, complaints handling, environmental monitoring and transparent stakeholder engagement.</p></div>
+</div>
+</div>
+</section>
+<section id="delivery">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">10. Functional Delivery Structure</span>
+<h2>Responsibilities confirmed project by project</h2>
+<p class="lead">No route, operator, infrastructure owner, public body or commercial participant is presented as committed until a formal agreement is executed.</p>
+</div>
+<div class="grid-2">
+<div class="card">
+<h3>Coordination and origination functions</h3>
+<ul>
+<li>Route and use-case definition</li>
+<li>Site and stakeholder mapping</li>
+<li>Feasibility coordination</li>
+<li>Infrastructure architecture</li>
+<li>Interoperability requirements</li>
+<li>Project governance and documentation</li>
+</ul>
+</div>
+<div class="card">
+<h3>Specialist delivery functions</h3>
+<ul>
+<li>Licensed UAS operation</li>
+<li>Aviation, SORA, planning and legal advice</li>
+<li>Civil engineering and utility delivery</li>
+<li>Station, charging and communications systems</li>
+<li>Cybersecurity and data governance</li>
+<li>Insurance, maintenance and public engagement</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="section-alt" id="pilot">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">11. Pilot Discussion Framework</span>
+<h2>Start with one defined, evidence-led use case</h2>
+<p class="lead">The purpose of a first pilot would be to test whether a defined corridor can deliver measurable operational or public value under manageable safety, planning, infrastructure and governance conditions.</p>
+</div>
+<div class="grid-4">
+<div class="card"><h3>Defined origin and destination</h3><p>Two controlled sites with clear ownership, access and infrastructure requirements.</p></div>
+<div class="card"><h3>Defined task</h3><p>A specific payload, inspection, monitoring or logistics requirement with measurable frequency and service criteria.</p></div>
+<div class="card"><h3>Defined operator pathway</h3><p>An authorised operator, suitable aircraft capability and route-specific regulatory assessment.</p></div>
+<div class="card"><h3>Defined evidence baseline</h3><p>Existing time, cost, road mileage, labour, emissions, safety exposure, reliability and service performance recorded before testing.</p></div>
+</div>
+<div class="section-heading" style="margin-top:58px">
+<span class="eyebrow">Illustrative Route Archetypes</span>
+<h2>Examples for challenge, not selected routes</h2>
+<p class="lead">These anonymised archetypes illustrate how different use cases might be considered. They do not indicate that any route, sector, customer, operator or partner has been selected or committed.</p>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Archetype</th>
+<th>Typical endpoints</th>
+<th>Indicative frequency</th>
+<th>Operational complexity</th>
+<th>Public exposure</th>
+<th>Evidence opportunity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Medical or laboratory sample</strong></td>
+<td>Hospital, clinic or collection point ↔ laboratory</td>
+<td>Daily or scheduled</td>
+<td>Medium</td>
+<td>Low to medium</td>
+<td>Time sensitivity, service reliability, road mileage and public value</td>
+</tr>
+<tr>
+<td><strong>Utility or infrastructure inspection</strong></td>
+<td>Controlled asset sites or repeat linear infrastructure</td>
+<td>Weekly, monthly or event-driven</td>
+<td>Low to medium</td>
+<td>Low</td>
+<td>Inspection time, safety exposure, labour input and repeatability</td>
+</tr>
+<tr>
+<td><strong>Industrial parts or samples</strong></td>
+<td>Industrial estate, port, logistics hub or controlled worksite</td>
+<td>Scheduled or variable</td>
+<td>Medium</td>
+<td>Low to medium</td>
+<td>Downtime avoided, delivery time, cost and emissions</td>
+</tr>
+<tr>
+<td><strong>Environmental monitoring</strong></td>
+<td>Controlled base ↔ monitoring, sampling or inspection location</td>
+<td>Repeat or seasonal</td>
+<td>Low to medium</td>
+<td>Low</td>
+<td>Coverage, data quality, response time and reduced field exposure</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section-heading" style="margin-top:58px">
+<span class="eyebrow">Tier 1 Minimum Viability Screen</span>
+<h2>Eliminate fatal constraints before ranking candidates</h2>
+<p class="lead">This initial working screen is proposed for industry review. A candidate route should proceed to detailed assessment only when all minimum conditions can be evidenced.</p>
+</div>
+<div class="screen-list">
+<div class="screen-item"><span class="screen-mark">1</span><div><h3>Recurring demonstrable demand</h3><p>A repeat operational requirement exists and can be distinguished from occasional or ad hoc drone activity.</p></div></div>
+<div class="screen-item"><span class="screen-mark">2</span><div><h3>Controlled and accessible endpoints</h3><p>Origin and destination sites have identifiable ownership, access and practical infrastructure pathways.</p></div></div>
+<div class="screen-item"><span class="screen-mark">3</span><div><h3>Credible operator pathway</h3><p>An appropriately authorised operator and aircraft pathway can be identified under the applicable regulatory framework.</p></div></div>
+<div class="screen-item"><span class="screen-mark">4</span><div><h3>Measurable baseline data</h3><p>The existing service can be measured, or a reliable baseline can be established before pilot operations begin.</p></div></div>
+<div class="screen-item"><span class="screen-mark">5</span><div><h3>No single fatal constraint</h3><p>No known planning, airspace, safety, environmental, community or commercial issue makes the route presently non-viable.</p></div></div>
+</div>
+<div class="notice">
+<h3>Tier 2 assessment</h3>
+<p>Routes that pass the minimum viability screen may then be compared through a separate weighted assessment covering operational readiness, evidence quality, delivery risk and replication potential. Detailed scoring mechanics are intentionally reserved for the Candidate Corridor Assessment document and remain subject to stakeholder review.</p>
+</div>
+</div>
+</section>
+<section id="pathway">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">12. Indicative Development Pathway</span>
+<h2>Progress only when evidence supports the next stage</h2>
+</div>
+<div class="roadmap-grid">
+<div class="roadmap-card"><span class="roadmap-number">1</span><h3>Identify</h3><p>Define use case, customer problem, candidate sites and route logic.</p></div>
+<div class="roadmap-card"><span class="roadmap-number">2</span><h3>Screen</h3><p>Apply the Tier 1 minimum viability screen and eliminate routes with unresolved fatal constraints before detailed comparison.</p></div>
+<div class="roadmap-card"><span class="roadmap-number">3</span><h3>Scope</h3><p>Prepare route, site, infrastructure, connectivity, operator and governance requirements.</p></div>
+<div class="roadmap-card"><span class="roadmap-number">4</span><h3>Demonstrate</h3><p>Conduct controlled testing only after required approvals, agreements and safety arrangements.</p></div>
+<div class="roadmap-card"><span class="roadmap-number">5</span><h3>Evaluate</h3><p>Measure performance against pre-agreed safety, service, cost, environmental, public-value and replication criteria using an established baseline.</p></div>
+<div class="roadmap-card"><span class="roadmap-number">6</span><h3>Decide</h3><p>Proceed, redesign, pause or stop based on evidence rather than assumed market momentum.</p></div>
+</div>
+</div>
+</section>
+<section class="section-alt" id="questions">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">13. Risks, Assumptions and Open Questions</span>
+<h2>Issues the industry should challenge</h2>
+</div>
+<div class="grid-2">
+<div class="card">
+<div class="question"><h3>Demand</h3><p>Which industrial, public-service or infrastructure use cases genuinely require a recurring corridor rather than ad hoc drone operations?</p></div>
+<div class="question"><h3>Safety and regulation</h3><p>Which route types are realistically assessable under current frameworks, and which assumptions are too optimistic?</p></div>
+<div class="question"><h3>Planning and public acceptance</h3><p>What planning, noise, privacy, visual-impact and consultation requirements should apply to permanent ground nodes?</p></div>
+<div class="question"><h3>Infrastructure economics</h3><p>What level of utilisation is required to justify sites, charging, communications, maintenance and security?</p></div>
+<div class="question"><h3>Insurance and liability</h3><p>How should liability be allocated between operator, site owner, infrastructure coordinator, technology provider and customer?</p></div>
+<div class="question"><h3>Baseline evidence</h3><p>Which candidate routes have sufficiently reliable existing data to demonstrate whether a pilot improved time, cost, safety, emissions, reliability or public value?</p></div></div>
+<div class="card">
+<div class="question"><h3>Connectivity and cybersecurity</h3><p>What resilience, redundancy, identity, monitoring and incident-response standards should apply?</p></div>
+<div class="question"><h3>Interoperability</h3><p>Can shared nodes support multiple authorised operators without creating unacceptable safety or integration risks?</p></div>
+<div class="question"><h3>Data governance</h3><p>Who owns telemetry, maintenance, route-performance and customer data, and what uses should be permitted?</p></div>
+<div class="question"><h3>Technology obsolescence</h3><p>How can infrastructure remain modular as aircraft, charging, communications and U-space systems evolve?</p></div>
+<div class="question"><h3>Governance</h3><p>What independent oversight, reporting, complaints and public-interest safeguards would be appropriate?</p></div>
+<div class="question"><h3>Replication</h3><p>Which elements of a successful corridor could transfer to a second route, and which would remain specific to the original use case, geography or operator?</p></div></div>
+</div>
+</div>
+</section>
+<section id="first-step">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">14. Proposed Feasibility Exercise</span>
+<h2>One structured corridor assessment</h2>
+<p class="lead">The next practical step would be a defined feasibility exercise, not a commitment to construction or flight operations.</p>
+</div>
+<div class="grid-2">
+<div class="card">
+<h3>Indicative outputs</h3>
+<ul>
+<li>Use-case and customer-need definition</li><li>Baseline-data plan covering time, cost, road mileage, labour, emissions, safety exposure and service reliability</li><li>Tier 1 minimum viability screen and fatal-constraint register</li><li>Outline Tier 2 assessment approach, including replication potential</li>
+<li>Origin, destination and route-screening map</li>
+<li>Initial aviation and ground-risk issues</li>
+<li>Site, planning and infrastructure requirements</li>
+<li>Operator and aircraft requirements</li>
+<li>Connectivity and cybersecurity blueprint</li>
+<li>Data-governance and responsibility matrix</li>
+<li>Indicative cost, programme and pilot criteria</li>
+<li>Go, redesign, pause or stop recommendation</li>
+</ul>
+</div>
+<div class="guardrail">
+<h3>Institutional guardrail</h3>
+<p>This paper does not state or imply that StrataNode is a State-appointed delivery vehicle, an authorised UAS operator or the holder of regulatory approval.</p>
+<p>Any future feasibility exercise should define ownership and permitted use of route intelligence, maps, designs, commercial analysis, technical architecture and operational data before work begins.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section-alt" id="sources">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">15. Reference Context</span>
+<h2>Documents informing the discussion</h2>
+</div>
+<div class="card source-list">
+<p><strong>Government of Ireland:</strong> National Policy Framework for Unmanned Aircraft Systems, August 2025.</p>
+<p><strong>Irish Aviation Authority:</strong> 2021 announcement concerning a BVLOS-capable Light UAS Operator Certificate.</p>
+<p><strong>Dublin City Council:</strong> Drone and Urban Air Mobility Strategy 2024–2029.</p>
+<p><strong>European industry precedent:</strong> Publicly reported initiatives combining automated ground stations with secure machine-to-machine communications.</p>
+<p class="small">These references provide context only. Their inclusion does not imply endorsement of StrataNode or validation of any proposed corridor.</p>
+</div>
+</div>
+</section>
+<section class="section-dark discussion" id="discussion">
+<div class="container">
+<span class="eyebrow">Invitation to Industry</span>
+<h2>Review it. Challenge it. Improve it.</h2>
+<p class="lead">The purpose of this paper is to expose assumptions early, identify practical barriers and improve the framework before any corridor is treated as technically, commercially or institutionally viable.</p>
+<div class="hero-actions" style="justify-content:center">
+<a class="button button-primary" href="https://github.com/stratanode-infrastructure/StrataNode-Infrastructure/issues/new" rel="noopener noreferrer" target="_blank">Submit Feedback on GitHub</a>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-grid">
+<div>
+<strong>StrataNode Infrastructure</strong>
+<p>Public Industry Discussion Paper</p>
+</div>
+<div>
+<p>Connecting Ireland’s Low-Altitude Economy through Corridors, Compliance, Construction, Commercialisation and Connectivity.</p>
+<p class="small">Working framework — for review, challenge and feedback.</p>
+</div>
+</div>
+</footer>
+</body>
+</html>
